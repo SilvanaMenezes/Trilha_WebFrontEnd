@@ -1,0 +1,256 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    font-size: 62.5%; /*equivale a 10px */
+
+}
+
+/* Estilos da Primeira Parte */
+
+h1 {
+    color: #776969;
+    background-color: antiquewhite;
+    font-size: 3.5rem;
+    font-style: italic;
+    text-align: center;
+    font-family: 'Pangolin', cursive;
+}
+h2 {
+    font-size: 20px;
+    text-decoration: underline;
+    color:#582323;
+    font-family:Arial, Helvetica, sans-serif;
+}
+a {
+    font-size: 2.4rem;
+    color:#01345e
+}
+a:visited {
+    color: #f7980a
+}
+a:hover {
+    color: #01a81d
+}
+p {
+    font-size: 1.8rem;
+    text-align: justify;
+    text-indent: 3.0rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+.bg{
+    height: 30.0rem;
+    width: 100%;
+    background-color: violet;
+    background-image: url('https://images.unsplash.com/photo-1681187636275-666cb92e1e38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Estilos da Segunda Parte */
+
+#alunos, #financeiro, #listas {
+    margin: 1.8em;
+}
+table, td, th {
+    border: 1px solid black;
+}
+table {
+    font-size: 2.0rem;
+    border-collapse: separate;
+}
+thead tr:first-child {
+    background-color: antiquewhite;
+    color: #532194;
+}
+table tr:nth-child(2n+2){
+    background-color: rgb(144, 151, 172);
+}
+ul, ol {
+    padding: 1.8rem;
+    font-size: 1.6rem;
+}
+ul {
+    list-style:square;
+}
+ol {
+    list-style: lower-roman;
+}
+.box {
+    height: 10rem;
+    width: 20rem;
+    margin: 1rem;
+    padding: 2rem;
+    background-color: rgb(219, 183, 104);
+    color: white;
+    border: 4px solid blue;
+    display:inline-block;
+    border-radius: 0.4rem;
+}
+img {
+    height:10rem;
+    width: 14rem;
+    object-fit: cover;
+}
+
+/* Estilos da Terceira Parte */
+
+.boxes {
+    position:relative;
+    display: flex;
+    flex-wrap: wrap;  
+}
+.caixa {
+    height: 10rem;
+    width: 20rem;
+    margin: 1.5rem;
+    padding: 1.5rem;
+    background-color: violet;
+    color: black;
+    font-weight: bold;
+    border: 10px solid blue;
+    display:inline-block;
+    flex: 33,33%;
+    border-radius: 0.4rem;
+    position: static;
+}
+.caixa + span{
+    margin: 1.5rem;
+    color: black;
+    font-weight: bold;
+    text-align: justify;
+}
+/* .caixa:nth-child(1){
+    position: absolute;
+    top: 30px;
+    left: 100px; 
+} */
+/* .caixa:nth-child(2){
+    position: fixed;
+    top: 15px;
+    left: 30px;
+} */
+
+/* Estilos da Quarta Parte */
+
+.grupo {
+    height: calc(100vh);
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    /* align-items: center; */
+    align-content: center;
+    gap: 2rem 5rem;
+}
+.cx {
+    min-height: 10rem;
+    min-width: 20rem;
+    padding: 1.5rem;
+    border: 5px solid orangered;
+    border-radius: 0.4rem;
+    background-color: yellow;
+    color: black;
+    font-size: 4rem;
+    display: flex;
+    flex: 1;
+    order: 10;
+    gap: 0 2rem;
+    justify-content: center;
+    align-content: center;
+
+}
+.cx:nth-child(3) {
+    order: 1;
+}
+.cx:nth-child(5) {
+    order: 2;
+    flex: 2;
+}
+.cx:nth-child(7) {
+    order: 3;
+}
+.cx p, button {
+    font-size: 4rem;
+}
+
+/* Estilos da Quinta Parte */
+
+#companies-table {
+    margin: 2rem;
+}
+[data-company = "GCO"] {
+    background-color: rgb(166, 238, 238);
+}
+[data-company = "CEC"] {
+    background-color: rgb(166, 236, 156);
+}
+[data-company] {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+@media screen and (min-width: 2560px) {
+    .bg {
+        height: 60vh;
+    }
+}
+
+@media screen and (min-width: 820px) and (max-width: 2559px) {
+    .bg {
+        height: 80vh;
+    }
+    #companies-table {
+        display: flex;
+        justify-content: center;
+    } 
+     
+}
+
+@media screen and (max-width: 819px) {
+    table {
+        display: none;
+    }
+    h1 {
+        color: black;
+    }  
+}
+
+@media print {
+    .bg {
+        display: none;
+    }
+}
+
+/* Estilos da Sexta Parte */
+
+.grids {
+    height: calc(100vh);
+    position: relative;
+    display: grid;
+    justify-content: flex-start;
+    gap: 2rem 1rem;
+    /* grid-template-columns: 1fr 2fr; */
+    grid-template-columns: 3fr repeat(2, 1fr);
+    grid-template-rows: minmax(150px, 10fr) 2fr;
+  
+}
+.grd {
+    min-height: 10rem;
+    min-width: 20rem;
+    padding: 1.5rem;
+    border: 5px solid green;
+    border-radius: 0.4rem;
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+}
+
+.grd, p{
+    font-size: 4rem;
+    color: black;
+}
