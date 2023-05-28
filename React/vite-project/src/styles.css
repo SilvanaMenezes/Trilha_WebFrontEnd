@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(58, 55, 55);
+    font-family:'Lucida Sans', Verdana, sans-serif ;
+}
+
+.container {
+    margin: 10px;
+    padding: 10px;
+}
+
+.titulo {
+    text-align: center;
+    color:#61dbfb; 
+}
+
+.subtitulo {
+    margin: 10px;
+    color: #9ad6ee;
+}
+
+.atividade {
+    margin: 10px;
+    color:#61fbbb
+}
+.item {
+    padding: 3px;
+    font-family: Verdana, Tahoma, sans-serif;
+    color: beige;
+}
+
+button, input {
+    padding: 10px;
+    margin-right: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid violet;
+    border-radius: 5px;
+    background-color: rgb(236, 193, 236);
+}
+
+ol {
+    margin-left: 10px;
+}
+
+p, li {
+    margin: 10px;
+    padding: 3px;
+    text-align: justify;
+    color: beige;
+}
+
+strong {
+    color: green;
+}
